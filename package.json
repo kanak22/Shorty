@@ -1,0 +1,24 @@
+{
+  "name": "shorty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanak22/Shorty.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanak22/Shorty/issues"
+  },
+  "homepage": "https://github.com/kanak22/Shorty#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
+  }
+}
