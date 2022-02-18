@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Shorty</h1>
     <p>Your URL Shortener</p>
-    <form action="/" method="post" class="my-4 form-inline">
+    <form action="/shortURLs" method="post" class="my-4 form-inline">
         <label for="fullURL" class="visually-hidden">URL</label>
         <input type="url" name="fullURL" id="fullURL" placeholder="Enter your URL" required class="form-control mr-2 col" >
         <button type="submit" class="btn btn-success">Shorten It</button>
@@ -26,11 +26,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><a href="https://www.merriam-webster.com/dictionary/hey">https://www.merriam-webster.com/dictionary/hey</a></td>
-                <td><a href="/12345">12345</a></td>
-                <td>10</td>
+            <% shortUrls.forEach(shortUrl => { %>
+                <tr>
+                <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                <td><%= shortUrl.clicks %></td>
             </tr>
+            <%});%>
+            
         </tbody>
     </table>
     </div>
