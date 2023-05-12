@@ -5,6 +5,7 @@ const ShortUrl = require('./models/shortUrl');
 
 const app = express();
 
+mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
